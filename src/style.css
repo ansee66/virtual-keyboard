@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 900px;
+  min-height: 100vh;
+  margin: auto;
+
+  font-family: "Arial", sans-serif;
+  text-align: center;
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  background-color: lightgray;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+}
+
+.keyboard__row {
+  display: flex;
+}
+
+.keyboard__key {
+  min-width: 50px;
+  height: 50px;
+  margin: 3px;
+  padding: 5px;
+
+  border: 1px solid black;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.keyboard__key:hover {
+  background-color: lightskyblue;
+  opacity: 0.7;
+}
+
+.keyboard__key--pressed {
+  background-color: lightskyblue;
+}
+
+.info {
+  font-size: 20px;
+}
