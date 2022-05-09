@@ -26,8 +26,28 @@ class Keyboard {
     }    
   }
 
-  pasteSymbol(text) {
-    this.textarea.value += text;
+  pasteSymbol(text, keyCode) {
+    if (keyCode === "Backspace") {
+      if (this.textarea.selectionStart !== this.textarea.selectionEnd) {
+        this.textarea.setRangeText("", this.textarea.selectionStart, this.textarea.selectionEnd);
+      } else {
+        if (this.textarea.selectionStart === 0) {
+          this.textarea.setRangeText("");
+        } else {
+          this.textarea.setRangeText("", (this.textarea.selectionStart - 1), this.textarea.selectionEnd);
+        }
+      }
+    } else if (keyCode === "Delete") {
+      if (this.textarea.selectionStart !== this.textarea.selectionEnd) {
+        this.textarea.setRangeText("", this.textarea.selectionStart, this.textarea.selectionEnd);
+      } else {
+        this.textarea.setRangeText("", this.textarea.selectionStart, (this.textarea.selectionEnd + 1));
+      }
+    } else {
+      this.textarea.setRangeText(text);
+      this.textarea.selectionStart += text.length;
+      this.textarea.selectionEnd = this.textarea.selectionStart;
+    }
   }
 
   setHandlers() {
@@ -36,8 +56,12 @@ class Keyboard {
       if (keyboardButton) {
         keyboardButton.classList.add("keyboard__key--pressed");
         ev.preventDefault();
-        if (ev.code === "Tab") {
+        if (ev.code === "Backspace") {
+          this.pasteSymbol("", ev.code);
+        } else if (ev.code === "Tab") {
           this.pasteSymbol("    ");
+        } else if (ev.code === "Delete") {
+          this.pasteSymbol("", ev.code);
         } else if (ev.code === "Enter") {
           this.pasteSymbol("\n");
         } else {

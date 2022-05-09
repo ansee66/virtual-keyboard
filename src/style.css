@@ -16,6 +16,9 @@
   width: 100%;
   min-height: 200px;
   margin-bottom: 20px;
+  padding: 10px;
+
+  font-size: 16px;
 }
 
 .keyboard {
@@ -38,6 +41,8 @@
   height: 50px;
   margin: 3px;
   padding: 5px;
+
+  font-size: 16px;
 
   border: 1px solid black;
   border-radius: 5px;
