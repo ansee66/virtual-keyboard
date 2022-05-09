@@ -7,7 +7,7 @@ class Keyboard {
     this.textarea = textarea;
     this.keyboardRows = [];
     this.isUpperRegister = false;
-    this.isDown = false;
+    this.isShiftDown = false;
     this.isCaps = false;
   }
 
@@ -56,7 +56,7 @@ class Keyboard {
     }
   }
 
-  switchRegister() {
+  switchRegister(key) {
     let needRegister;
     if (this.isUpperRegister) {
       needRegister = "lower";
@@ -67,7 +67,17 @@ class Keyboard {
     }
     this.keyboardRows.map((row, i) => {
       row.map((button) => {
-        button.innerHTML = keyset[i][button.dataset.code]["en"][needRegister];
+        if (button.dataset.code.indexOf("Key") !== -1) {
+          button.innerHTML = keyset[i][button.dataset.code]["en"][needRegister];
+        } else {
+          if (key === "ShiftLeft" || key === "ShiftRight") {
+            if (this.isShiftDown) {
+              button.innerHTML = keyset[i][button.dataset.code]["en"]["upper"];
+            } else {
+              button.innerHTML = keyset[i][button.dataset.code]["en"]["lower"];
+            }
+          }
+        }
       })
     })
   }
@@ -85,13 +95,13 @@ class Keyboard {
         } else if (ev.code === "Delete") {
           this.pasteSymbol("", ev.code);
         } else if (ev.code === "CapsLock") {
-          this.switchRegister();
+          this.switchRegister(ev.code);
         } else if (ev.code === "Enter") {
           this.pasteSymbol("\n");
         } else if (ev.code === "ShiftLeft" || ev.code === "ShiftRight") {
-          if (this.isDown) return;
-          this.isDown = true;
-          this.switchRegister();
+          if (this.isShiftDown) return;
+          this.isShiftDown = true;
+          this.switchRegister(ev.code);
         } else {
           this.pasteSymbol(keyboardButton.textContent);
         }
@@ -110,8 +120,8 @@ class Keyboard {
           this.isCaps ? this.isCaps = false : this.isCaps = true;
         }
         if (ev.code === "ShiftLeft" || ev.code === "ShiftRight") {
-          this.isDown = false;
-          this.switchRegister();
+          this.isShiftDown = false;
+          this.switchRegister(ev.code);
         }
       }
     });
