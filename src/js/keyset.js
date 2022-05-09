@@ -8,7 +8,7 @@ const keyset = [
       ru: {
         lower: 'ё',
         upper: 'Ё',
-      } 
+      },
     },
     Digit1: {
       en: {
@@ -18,7 +18,7 @@ const keyset = [
       ru: {
         lower: '1',
         upper: '!',
-      } 
+      },
     },
     Digit2: {
       en: {
@@ -28,7 +28,7 @@ const keyset = [
       ru: {
         lower: '2',
         upper: '"',
-      } 
+      },
     },
     Digit3: {
       en: {
@@ -38,7 +38,7 @@ const keyset = [
       ru: {
         lower: '3',
         upper: '№',
-      } 
+      },
     },
     Digit4: {
       en: {
@@ -48,7 +48,7 @@ const keyset = [
       ru: {
         lower: '4',
         upper: ';',
-      } 
+      },
     },
     Digit5: {
       en: {
@@ -58,7 +58,7 @@ const keyset = [
       ru: {
         lower: '5',
         upper: '%',
-      } 
+      },
     },
     Digit6: {
       en: {
@@ -68,7 +68,7 @@ const keyset = [
       ru: {
         lower: '6',
         upper: ':',
-      } 
+      },
     },
     Digit7: {
       en: {
@@ -78,7 +78,7 @@ const keyset = [
       ru: {
         lower: '7',
         upper: '?',
-      } 
+      },
     },
     Digit8: {
       en: {
@@ -88,7 +88,7 @@ const keyset = [
       ru: {
         lower: '8',
         upper: '*',
-      } 
+      },
     },
     Digit9: {
       en: {
@@ -98,7 +98,7 @@ const keyset = [
       ru: {
         lower: '9',
         upper: '(',
-      } 
+      },
     },
     Digit0: {
       en: {
@@ -108,7 +108,7 @@ const keyset = [
       ru: {
         lower: '0',
         upper: ')',
-      } 
+      },
     },
     Minus: {
       en: {
@@ -118,7 +118,7 @@ const keyset = [
       ru: {
         lower: '-',
         upper: '_',
-      } 
+      },
     },
     Equal: {
       en: {
@@ -128,7 +128,7 @@ const keyset = [
       ru: {
         lower: '=',
         upper: '+',
-      } 
+      },
     },
     Backspace: {
       en: {
@@ -138,8 +138,8 @@ const keyset = [
       ru: {
         lower: 'Backspace',
         upper: 'Backspace',
-      } 
-    }
+      },
+    },
   },
   {
     Tab: {
@@ -150,7 +150,7 @@ const keyset = [
       ru: {
         lower: 'Tab',
         upper: 'Tab',
-      } 
+      },
     },
     KeyQ: {
       en: {
@@ -160,7 +160,7 @@ const keyset = [
       ru: {
         lower: 'й',
         upper: 'Й',
-      } 
+      },
     },
     KeyW: {
       en: {
@@ -170,7 +170,7 @@ const keyset = [
       ru: {
         lower: 'ц',
         upper: 'Ц',
-      } 
+      },
     },
     KeyE: {
       en: {
@@ -180,7 +180,7 @@ const keyset = [
       ru: {
         lower: 'у',
         upper: 'У',
-      } 
+      },
     },
     KeyR: {
       en: {
@@ -190,7 +190,7 @@ const keyset = [
       ru: {
         lower: 'к',
         upper: 'К',
-      } 
+      },
     },
     KeyT: {
       en: {
@@ -200,7 +200,7 @@ const keyset = [
       ru: {
         lower: 'е',
         upper: 'Е',
-      } 
+      },
     },
     KeyY: {
       en: {
@@ -210,7 +210,7 @@ const keyset = [
       ru: {
         lower: 'н',
         upper: 'Н',
-      } 
+      },
     },
     KeyU: {
       en: {
@@ -220,7 +220,7 @@ const keyset = [
       ru: {
         lower: 'г',
         upper: 'Г',
-      } 
+      },
     },
     KeyI: {
       en: {
@@ -230,7 +230,7 @@ const keyset = [
       ru: {
         lower: 'ш',
         upper: 'Ш',
-      } 
+      },
     },
     KeyO: {
       en: {
@@ -240,7 +240,7 @@ const keyset = [
       ru: {
         lower: 'щ',
         upper: 'Щ',
-      } 
+      },
     },
     KeyP: {
       en: {
@@ -250,7 +250,7 @@ const keyset = [
       ru: {
         lower: 'з',
         upper: 'З',
-      } 
+      },
     },
     BracketLeft: {
       en: {
@@ -260,7 +260,7 @@ const keyset = [
       ru: {
         lower: 'х',
         upper: 'Х',
-      } 
+      },
     },
     BracketRight: {
       en: {
@@ -270,7 +270,7 @@ const keyset = [
       ru: {
         lower: 'ъ',
         upper: 'Ъ',
-      } 
+      },
     },
     Backslash: {
       en: {
@@ -280,7 +280,7 @@ const keyset = [
       ru: {
         lower: '\\',
         upper: '/',
-      } 
+      },
     },
     Delete: {
       en: {
@@ -290,8 +290,8 @@ const keyset = [
       ru: {
         lower: 'Del',
         upper: 'Del',
-      } 
-    }
+      },
+    },
   },
   {
     CapsLock: {
@@ -302,7 +302,7 @@ const keyset = [
       ru: {
         lower: 'Caps Lock',
         upper: 'Caps Lock',
-      } 
+      },
     },
     KeyA: {
       en: {
@@ -312,7 +312,7 @@ const keyset = [
       ru: {
         lower: 'ф',
         upper: 'Ф',
-      } 
+      },
     },
     KeyS: {
       en: {
@@ -322,7 +322,7 @@ const keyset = [
       ru: {
         lower: 'ы',
         upper: 'Ы',
-      } 
+      },
     },
     KeyD: {
       en: {
@@ -332,7 +332,7 @@ const keyset = [
       ru: {
         lower: 'в',
         upper: 'В',
-      } 
+      },
     },
     KeyF: {
       en: {
@@ -342,7 +342,7 @@ const keyset = [
       ru: {
         lower: 'а',
         upper: 'А',
-      } 
+      },
     },
     KeyG: {
       en: {
@@ -352,7 +352,7 @@ const keyset = [
       ru: {
         lower: 'п',
         upper: 'П',
-      } 
+      },
     },
     KeyH: {
       en: {
@@ -362,7 +362,7 @@ const keyset = [
       ru: {
         lower: 'р',
         upper: 'Р',
-      } 
+      },
     },
     KeyJ: {
       en: {
@@ -372,7 +372,7 @@ const keyset = [
       ru: {
         lower: 'о',
         upper: 'О',
-      } 
+      },
     },
     KeyK: {
       en: {
@@ -382,7 +382,7 @@ const keyset = [
       ru: {
         lower: 'л',
         upper: 'Л',
-      } 
+      },
     },
     KeyL: {
       en: {
@@ -392,7 +392,7 @@ const keyset = [
       ru: {
         lower: 'д',
         upper: 'Д',
-      } 
+      },
     },
     Semicolon: {
       en: {
@@ -402,7 +402,7 @@ const keyset = [
       ru: {
         lower: 'ж',
         upper: 'Ж',
-      } 
+      },
     },
     Quote: {
       en: {
@@ -412,7 +412,7 @@ const keyset = [
       ru: {
         lower: 'э',
         upper: 'Э',
-      } 
+      },
     },
     Enter: {
       en: {
@@ -422,8 +422,8 @@ const keyset = [
       ru: {
         lower: 'Enter',
         upper: 'Enter',
-      } 
-    }
+      },
+    },
   },
   {
     ShiftLeft: {
@@ -434,7 +434,7 @@ const keyset = [
       ru: {
         lower: 'Shift',
         upper: 'Shift',
-      } 
+      },
     },
     KeyZ: {
       en: {
@@ -444,7 +444,7 @@ const keyset = [
       ru: {
         lower: 'я',
         upper: 'Я',
-      } 
+      },
     },
     KeyX: {
       en: {
@@ -454,7 +454,7 @@ const keyset = [
       ru: {
         lower: 'ч',
         upper: 'Ч',
-      } 
+      },
     },
     KeyC: {
       en: {
@@ -464,7 +464,7 @@ const keyset = [
       ru: {
         lower: 'с',
         upper: 'С',
-      } 
+      },
     },
     KeyV: {
       en: {
@@ -474,7 +474,7 @@ const keyset = [
       ru: {
         lower: 'м',
         upper: 'М',
-      } 
+      },
     },
     KeyB: {
       en: {
@@ -484,7 +484,7 @@ const keyset = [
       ru: {
         lower: 'и',
         upper: 'И',
-      } 
+      },
     },
     KeyN: {
       en: {
@@ -494,7 +494,7 @@ const keyset = [
       ru: {
         lower: 'т',
         upper: 'Т',
-      } 
+      },
     },
     KeyM: {
       en: {
@@ -504,7 +504,7 @@ const keyset = [
       ru: {
         lower: 'ь',
         upper: 'Ь',
-      } 
+      },
     },
     Comma: {
       en: {
@@ -514,7 +514,7 @@ const keyset = [
       ru: {
         lower: 'б',
         upper: 'Б',
-      } 
+      },
     },
     Period: {
       en: {
@@ -524,7 +524,7 @@ const keyset = [
       ru: {
         lower: 'ю',
         upper: 'Ю',
-      } 
+      },
     },
     Slash: {
       en: {
@@ -534,7 +534,7 @@ const keyset = [
       ru: {
         lower: '.',
         upper: ',',
-      } 
+      },
     },
     ArrowUp: {
       en: {
@@ -544,7 +544,7 @@ const keyset = [
       ru: {
         lower: '▲',
         upper: '▲',
-      } 
+      },
     },
     ShiftRight: {
       en: {
@@ -554,8 +554,8 @@ const keyset = [
       ru: {
         lower: 'Shift',
         upper: 'Shift',
-      } 
-    }
+      },
+    },
   },
   {
     ControlLeft: {
@@ -566,7 +566,7 @@ const keyset = [
       ru: {
         lower: 'Ctrl',
         upper: 'Ctrl',
-      } 
+      },
     },
     MetaLeft: {
       en: {
@@ -576,7 +576,7 @@ const keyset = [
       ru: {
         lower: 'Win',
         upper: 'Win',
-      } 
+      },
     },
     AltLeft: {
       en: {
@@ -586,7 +586,7 @@ const keyset = [
       ru: {
         lower: 'Alt',
         upper: 'Alt',
-      } 
+      },
     },
     Space: {
       en: {
@@ -596,7 +596,7 @@ const keyset = [
       ru: {
         lower: ' ',
         upper: ' ',
-      } 
+      },
     },
     AltRight: {
       en: {
@@ -606,7 +606,7 @@ const keyset = [
       ru: {
         lower: 'Alt',
         upper: 'Alt',
-      } 
+      },
     },
     ArrowLeft: {
       en: {
@@ -616,7 +616,7 @@ const keyset = [
       ru: {
         lower: '◄',
         upper: '◄',
-      } 
+      },
     },
     ArrowDown: {
       en: {
@@ -626,7 +626,7 @@ const keyset = [
       ru: {
         lower: '▼',
         upper: '▼',
-      } 
+      },
     },
     ArrowRight: {
       en: {
@@ -636,7 +636,7 @@ const keyset = [
       ru: {
         lower: '►',
         upper: '►',
-      } 
+      },
     },
     ControlRight: {
       en: {
@@ -646,9 +646,9 @@ const keyset = [
       ru: {
         lower: 'Ctrl',
         upper: 'Ctrl',
-      } 
-    }
-  }
-]
+      },
+    },
+  },
+];
 
 export default keyset;
