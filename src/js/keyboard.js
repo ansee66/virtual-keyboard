@@ -114,7 +114,7 @@ class Keyboard {
               button.innerHTML = keyset[i][button.dataset.code][this.lang][register];
             })
           })
-        } else if (ev.code === "ControlLeft" || ev.code === "ControlRight" || ev.code === "AltRight" || ev.code === "AltLeft") {
+        } else if (ev.code === "ControlLeft" || ev.code === "ControlRight" || ev.code === "AltRight" || ev.code === "AltLeft" || ev.code === "MetaLeft") {
           return;
         } else {
           this.pasteSymbol(keyboardButton.textContent);

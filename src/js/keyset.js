@@ -568,6 +568,16 @@ const keyset = [
         upper: 'Ctrl',
       } 
     },
+    MetaLeft: {
+      en: {
+        lower: 'Win',
+        upper: 'Win',
+      },
+      ru: {
+        lower: 'Win',
+        upper: 'Win',
+      } 
+    },
     AltLeft: {
       en: {
         lower: 'Alt',
