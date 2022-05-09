@@ -8,6 +8,7 @@ class Keyboard {
     this.lang = localStorage.getItem("lang") === "en" ? "en" : "ru";
     this.keyboardRows = [];
     this.isUpperRegister = false;
+    this.isDown = false;
     this.isShiftDown = false;
     this.isCaps = false;
   }
@@ -145,6 +146,7 @@ class Keyboard {
         code: ev.target.dataset.code,
       });
       document.dispatchEvent(keyDownEvent);
+      this.isDown = true;
     });
 
     this.keyboard.addEventListener("mouseup", (ev) => {
@@ -152,6 +154,16 @@ class Keyboard {
         code: ev.target.dataset.code,
       });
       document.dispatchEvent(keyUpEvent);
+      this.isDown = false;
+    });
+
+    this.keyboard.addEventListener("mouseout", (ev) => {
+      if (this.isDown) {
+        const keyUpEvent = new KeyboardEvent("keyup", { 
+          code: ev.target.dataset.code,
+        });
+        document.dispatchEvent(keyUpEvent);
+      }
     });
   }
 }
