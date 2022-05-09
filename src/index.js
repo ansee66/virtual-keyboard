@@ -1,3 +1,4 @@
+import './style.css';
 import Keyboard from './js/keyboard.js';
 
 const main = document.createElement('main');
