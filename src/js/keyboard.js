@@ -5,6 +5,10 @@ class Keyboard {
   constructor(keyboard, textarea) {
     this.keyboard = keyboard;
     this.textarea = textarea;
+    this.keyboardRows = [];
+    this.isUpperRegister = false;
+    this.isDown = false;
+    this.isCaps = false;
   }
 
   renderKeyboard() {
@@ -12,6 +16,7 @@ class Keyboard {
       let keyboardRow = document.createElement("div");
       keyboardRow.classList.add("keyboard__row");
       this.keyboard.append(keyboardRow);
+      this.keyboardRows.push([]);
       let keyboardRowKeys = Object.keys(keyset[i]);
       let count = 0;
 
@@ -21,9 +26,10 @@ class Keyboard {
         keyboardButton.dataset.code = keyboardRowKeys[count];
         keyboardButton.innerHTML = keyset[i][key]["en"]["lower"];
         keyboardRow.append(keyboardButton);
+        this.keyboardRows[i].push(keyboardButton);
         count++;
       }
-    }    
+    }
   }
 
   pasteSymbol(text, keyCode) {
@@ -50,6 +56,22 @@ class Keyboard {
     }
   }
 
+  switchRegister() {
+    let needRegister;
+    if (this.isUpperRegister) {
+      needRegister = "lower";
+      this.isUpperRegister = false;
+    } else {
+      needRegister = "upper";
+      this.isUpperRegister = true;
+    }
+    this.keyboardRows.map((row, i) => {
+      row.map((button) => {
+        button.innerHTML = keyset[i][button.dataset.code]["en"][needRegister];
+      })
+    })
+  }
+
   setHandlers() {
     document.addEventListener("keydown", (ev) => {
       const keyboardButton = document.querySelector(`[data-code="${ev.code}"]`);
@@ -62,8 +84,14 @@ class Keyboard {
           this.pasteSymbol("    ");
         } else if (ev.code === "Delete") {
           this.pasteSymbol("", ev.code);
+        } else if (ev.code === "CapsLock") {
+          this.switchRegister();
         } else if (ev.code === "Enter") {
           this.pasteSymbol("\n");
+        } else if (ev.code === "ShiftLeft" || ev.code === "ShiftRight") {
+          if (this.isDown) return;
+          this.isDown = true;
+          this.switchRegister();
         } else {
           this.pasteSymbol(keyboardButton.textContent);
         }
@@ -75,6 +103,15 @@ class Keyboard {
       if (keyboardButton) {
         if (ev.code !== 'CapsLock') {
           keyboardButton.classList.remove("keyboard__key--pressed");
+        } else {
+          if (this.isCaps) {
+            keyboardButton.classList.remove("keyboard__key--pressed");
+          }
+          this.isCaps ? this.isCaps = false : this.isCaps = true;
+        }
+        if (ev.code === "ShiftLeft" || ev.code === "ShiftRight") {
+          this.isDown = false;
+          this.switchRegister();
         }
       }
     });

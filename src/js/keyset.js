@@ -293,6 +293,270 @@ const keyset = [
       } 
     }
   },
+  {
+    CapsLock: {
+      en: {
+        lower: 'Caps Lock',
+        upper: 'Caps Lock',
+      },
+      ru: {
+        lower: 'Caps Lock',
+        upper: 'Caps Lock',
+      } 
+    },
+    KeyA: {
+      en: {
+        lower: 'a',
+        upper: 'A',
+      },
+      ru: {
+        lower: 'ф',
+        upper: 'Ф',
+      } 
+    },
+    KeyS: {
+      en: {
+        lower: 's',
+        upper: 'S',
+      },
+      ru: {
+        lower: 'ы',
+        upper: 'Ы',
+      } 
+    },
+    KeyD: {
+      en: {
+        lower: 'd',
+        upper: 'D',
+      },
+      ru: {
+        lower: 'в',
+        upper: 'В',
+      } 
+    },
+    KeyF: {
+      en: {
+        lower: 'f',
+        upper: 'F',
+      },
+      ru: {
+        lower: 'а',
+        upper: 'А',
+      } 
+    },
+    KeyG: {
+      en: {
+        lower: 'g',
+        upper: 'G',
+      },
+      ru: {
+        lower: 'п',
+        upper: 'П',
+      } 
+    },
+    KeyH: {
+      en: {
+        lower: 'h',
+        upper: 'H',
+      },
+      ru: {
+        lower: 'р',
+        upper: 'Р',
+      } 
+    },
+    KeyJ: {
+      en: {
+        lower: 'j',
+        upper: 'J',
+      },
+      ru: {
+        lower: 'о',
+        upper: 'О',
+      } 
+    },
+    KeyK: {
+      en: {
+        lower: 'k',
+        upper: 'K',
+      },
+      ru: {
+        lower: 'л',
+        upper: 'Л',
+      } 
+    },
+    KeyL: {
+      en: {
+        lower: 'l',
+        upper: 'L',
+      },
+      ru: {
+        lower: 'д',
+        upper: 'Д',
+      } 
+    },
+    Semicolon: {
+      en: {
+        lower: ';',
+        upper: ':',
+      },
+      ru: {
+        lower: 'ж',
+        upper: 'Ж',
+      } 
+    },
+    Quote: {
+      en: {
+        lower: "'",
+        upper: '"',
+      },
+      ru: {
+        lower: 'э',
+        upper: 'Э',
+      } 
+    },
+    Enter: {
+      en: {
+        lower: 'Enter',
+        upper: 'Enter',
+      },
+      ru: {
+        lower: 'Enter',
+        upper: 'Enter',
+      } 
+    }
+  },
+  {
+    ShiftLeft: {
+      en: {
+        lower: 'Shift',
+        upper: 'Shift',
+      },
+      ru: {
+        lower: 'Shift',
+        upper: 'Shift',
+      } 
+    },
+    KeyZ: {
+      en: {
+        lower: 'z',
+        upper: 'Z',
+      },
+      ru: {
+        lower: 'я',
+        upper: 'Я',
+      } 
+    },
+    KeyX: {
+      en: {
+        lower: 'x',
+        upper: 'X',
+      },
+      ru: {
+        lower: 'ч',
+        upper: 'Ч',
+      } 
+    },
+    KeyC: {
+      en: {
+        lower: 'c',
+        upper: 'C',
+      },
+      ru: {
+        lower: 'с',
+        upper: 'С',
+      } 
+    },
+    KeyV: {
+      en: {
+        lower: 'v',
+        upper: 'V',
+      },
+      ru: {
+        lower: 'м',
+        upper: 'М',
+      } 
+    },
+    KeyB: {
+      en: {
+        lower: 'b',
+        upper: 'B',
+      },
+      ru: {
+        lower: 'и',
+        upper: 'И',
+      } 
+    },
+    KeyN: {
+      en: {
+        lower: 'n',
+        upper: 'N',
+      },
+      ru: {
+        lower: 'т',
+        upper: 'Т',
+      } 
+    },
+    KeyM: {
+      en: {
+        lower: 'm',
+        upper: 'M',
+      },
+      ru: {
+        lower: 'ь',
+        upper: 'Ь',
+      } 
+    },
+    Comma: {
+      en: {
+        lower: ',',
+        upper: '<',
+      },
+      ru: {
+        lower: 'б',
+        upper: 'Б',
+      } 
+    },
+    Period: {
+      en: {
+        lower: '.',
+        upper: '>',
+      },
+      ru: {
+        lower: 'ю',
+        upper: 'Ю',
+      } 
+    },
+    Slash: {
+      en: {
+        lower: '/',
+        upper: '?',
+      },
+      ru: {
+        lower: '.',
+        upper: ',',
+      } 
+    },
+    ArrowUp: {
+      en: {
+        lower: '&uarr;',
+        upper: '&uarr;',
+      },
+      ru: {
+        lower: '&uarr;',
+        upper: '&uarr;',
+      } 
+    },
+    ShiftRight: {
+      en: {
+        lower: 'Shift',
+        upper: 'Shift',
+      },
+      ru: {
+        lower: 'Shift',
+        upper: 'Shift',
+      } 
+    }
+  },
 ]
 
 export default keyset;
