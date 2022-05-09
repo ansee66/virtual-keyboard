@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 864px;
+  min-height: 100vh;
+  margin: auto;
+
+  font-family: monospace;
+  text-align: center;
+}
+
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  font-size: 16px;
+
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  background-color: lightgray;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.keyboard__row {
+  display: flex;
+  justify-content: center;
+}
+
+.keyboard__key {
+  min-width: 50px;
+  height: 50px;
+  margin: 3px;
+  padding: 1px;
+
+  font-family: monospace;
+  font-size: 18px;
+
+  color: #67c50a;
+  background-color: #000;
+  border-radius: 7px;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.keyboard__key:hover {
+  opacity: 0.7;
+}
+
+.keyboard__key--pressed {
+  color: #000;
+  background-color: #67c50a;
+}
+
+.keyboard__key[data-code="Backspace"],
+.keyboard__key[data-code="CapsLock"],
+.keyboard__key[data-code="Enter"],
+.keyboard__key[data-code="ShiftLeft"],
+.keyboard__key[data-code="ShiftRight"] {
+  flex-basis: 100px;
+  flex-grow: 1;
+
+  filter: opacity(85%);
+}
+
+.keyboard__key[data-code="Space"] {
+  flex-basis: 100px;
+  flex-grow: 1;
+}
+
+.keyboard__key[data-code="Tab"],
+.keyboard__key[data-code="Delete"],
+.keyboard__key[data-code="ControlLeft"],
+.keyboard__key[data-code="ControlRight"],
+.keyboard__key[data-code="MetaLeft"],
+.keyboard__key[data-code="AltLeft"],
+.keyboard__key[data-code="AltRight"],
+.keyboard__key[data-code="ArrowUp"],
+.keyboard__key[data-code="ArrowLeft"],
+.keyboard__key[data-code="ArrowDown"],
+.keyboard__key[data-code="ArrowRight"] {
+  filter: opacity(85%);
+}
+
+.info {
+  font-size: 20px;
+}
