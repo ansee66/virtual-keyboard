@@ -5,6 +5,7 @@ class Keyboard {
   constructor(keyboard, textarea) {
     this.keyboard = keyboard;
     this.textarea = textarea;
+    this.lang = localStorage.getItem("lang") === "en" ? "en" : "ru";
     this.keyboardRows = [];
     this.isUpperRegister = false;
     this.isShiftDown = false;
@@ -24,7 +25,7 @@ class Keyboard {
         let keyboardButton = document.createElement("button");
         keyboardButton.classList.add("keyboard__key");
         keyboardButton.dataset.code = keyboardRowKeys[count];
-        keyboardButton.innerHTML = keyset[i][key]["en"]["lower"];
+        keyboardButton.innerHTML = keyset[i][key][this.lang]["lower"];
         keyboardRow.append(keyboardButton);
         this.keyboardRows[i].push(keyboardButton);
         count++;
@@ -67,14 +68,15 @@ class Keyboard {
     }
     this.keyboardRows.map((row, i) => {
       row.map((button) => {
-        if (button.dataset.code.indexOf("Key") !== -1) {
-          button.innerHTML = keyset[i][button.dataset.code]["en"][needRegister];
+        const extraRuLetters = ["Comma", "Period", "Semicolon", "Quote", "BracketLeft", "BracketRight", "Backquote"];
+        if ((this.lang === "en" && button.dataset.code.indexOf("Key") !== -1) || (this.lang === "ru" && (button.dataset.code.indexOf("Key") !== -1 || extraRuLetters.includes(button.dataset.code)))) {
+          button.innerHTML = keyset[i][button.dataset.code][this.lang][needRegister];
         } else {
           if (key === "ShiftLeft" || key === "ShiftRight") {
             if (this.isShiftDown) {
-              button.innerHTML = keyset[i][button.dataset.code]["en"]["upper"];
+              button.innerHTML = keyset[i][button.dataset.code][this.lang]["upper"];
             } else {
-              button.innerHTML = keyset[i][button.dataset.code]["en"]["lower"];
+              button.innerHTML = keyset[i][button.dataset.code][this.lang]["lower"];
             }
           }
         }
@@ -102,6 +104,18 @@ class Keyboard {
           if (this.isShiftDown) return;
           this.isShiftDown = true;
           this.switchRegister(ev.code);
+        } else if (ev.shiftKey && ev.altKey) {
+          this.lang = this.lang === "en" ? "ru" : "en";
+          localStorage.setItem("lang", this.lang);
+          let register;
+          this.isUpperRegister ? register = "upper" : register = "lower";
+          this.keyboardRows.map((row, i) => {
+            row.map((button) => {
+              button.innerHTML = keyset[i][button.dataset.code][this.lang][register];
+            })
+          })
+        } else if (ev.code === "ControlLeft" || ev.code === "ControlRight" || ev.code === "AltRight" || ev.code === "AltLeft") {
+          return;
         } else {
           this.pasteSymbol(keyboardButton.textContent);
         }

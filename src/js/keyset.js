@@ -538,12 +538,12 @@ const keyset = [
     },
     ArrowUp: {
       en: {
-        lower: '&uarr;',
-        upper: '&uarr;',
+        lower: '▲',
+        upper: '▲',
       },
       ru: {
-        lower: '&uarr;',
-        upper: '&uarr;',
+        lower: '▲',
+        upper: '▲',
       } 
     },
     ShiftRight: {
@@ -557,6 +557,88 @@ const keyset = [
       } 
     }
   },
+  {
+    ControlLeft: {
+      en: {
+        lower: 'Ctrl',
+        upper: 'Ctrl',
+      },
+      ru: {
+        lower: 'Ctrl',
+        upper: 'Ctrl',
+      } 
+    },
+    AltLeft: {
+      en: {
+        lower: 'Alt',
+        upper: 'Alt',
+      },
+      ru: {
+        lower: 'Alt',
+        upper: 'Alt',
+      } 
+    },
+    Space: {
+      en: {
+        lower: ' ',
+        upper: ' ',
+      },
+      ru: {
+        lower: ' ',
+        upper: ' ',
+      } 
+    },
+    AltRight: {
+      en: {
+        lower: 'Alt',
+        upper: 'Alt',
+      },
+      ru: {
+        lower: 'Alt',
+        upper: 'Alt',
+      } 
+    },
+    ArrowLeft: {
+      en: {
+        lower: '◄',
+        upper: '◄',
+      },
+      ru: {
+        lower: '◄',
+        upper: '◄',
+      } 
+    },
+    ArrowDown: {
+      en: {
+        lower: '▼',
+        upper: '▼',
+      },
+      ru: {
+        lower: '▼',
+        upper: '▼',
+      } 
+    },
+    ArrowRight: {
+      en: {
+        lower: '►',
+        upper: '►',
+      },
+      ru: {
+        lower: '►',
+        upper: '►',
+      } 
+    },
+    ControlRight: {
+      en: {
+        lower: 'Ctrl',
+        upper: 'Ctrl',
+      },
+      ru: {
+        lower: 'Ctrl',
+        upper: 'Ctrl',
+      } 
+    }
+  }
 ]
 
 export default keyset;
