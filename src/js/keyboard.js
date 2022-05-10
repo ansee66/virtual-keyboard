@@ -1,4 +1,4 @@
-import keyset from './keyset.js';
+import keyset from './keyset';
 
 class Keyboard {
   constructor(keyboard, textarea) {
@@ -21,7 +21,7 @@ class Keyboard {
       const keyboardRowKeys = Object.keys(keyset[i]);
       let count = 0;
 
-      for (const key in keyset[i]) {
+      keyboardRowKeys.forEach((key) => {
         const keyboardButton = document.createElement('button');
         keyboardButton.classList.add('keyboard__key');
         keyboardButton.dataset.code = keyboardRowKeys[count];
@@ -29,7 +29,7 @@ class Keyboard {
         keyboardRow.append(keyboardButton);
         this.keyboardRows[i].push(keyboardButton);
         count += 1;
-      }
+      });
     }
   }
 

@@ -1,5 +1,5 @@
 import './style.css';
-import Keyboard from './js/keyboard.js';
+import Keyboard from './js/keyboard';
 
 const main = document.createElement('main');
 const container = document.createElement('div');
